@@ -1,0 +1,29 @@
+{
+  "login": {
+    "title": "Akses akun Anda",
+    "subtitle": "Platform Offboarding Cladtek",
+    "username_label": "NAMA PENGGUNA",
+    "username_placeholder": "Cth: nama.belakang",
+    "password_label": "KATA SANDI",
+    "forgot_password": "Lupa kata sandi?",
+    "btn_enter": "Masuk ke platform",
+    "support": "DUKUNGAN TEKNIS"
+  },
+  "navbar": {
+    "offboarding": "Offboarding",
+    "hello": "Halo,",
+    "logout": "Keluar"
+  },
+  "offboarding": {
+    "title": "Offboarding",
+    "search_label": "Cari karyawan",
+    "btn_search": "Cari",
+    "user_name": "Nama:",
+    "user_id": "ID Karyawan:",
+    "user_dept": "Departemen:",
+    "user_status": "Status:",
+    "user_email": "Email:",
+    "btn_offboard": "Offboarding",
+    "systems_identified": "SISTEM YANG TERIDENTIFIKASI"
+  }
+}

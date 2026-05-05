@@ -1,0 +1,29 @@
+{
+  "login": {
+    "title": "الوصول إلى حسابك",
+    "subtitle": "منصة Cladtek لإنهاء الخدمة",
+    "username_label": "اسم المستخدم",
+    "username_placeholder": "مثال: الاسم.اللقب",
+    "password_label": "كلمة المرور",
+    "forgot_password": "هل نسيت كلمة المرور؟",
+    "btn_enter": "الدخول إلى المنصة",
+    "support": "الدعم الفني"
+  },
+  "navbar": {
+    "offboarding": "إنهاء الخدمة",
+    "hello": "مرحباً،",
+    "logout": "تسجيل خروج"
+  },
+  "offboarding": {
+    "title": "إنهاء الخدمة",
+    "search_label": "البحث عن موظف",
+    "btn_search": "بحث",
+    "user_name": "الاسم:",
+    "user_id": "رقم التسجيل:",
+    "user_dept": "القسم:",
+    "user_status": "الحالة:",
+    "user_email": "البريد الإلكتروني:",
+    "btn_offboard": "إنهاء الخدمة",
+    "systems_identified": "الأنظمة المحددة"
+  }
+}

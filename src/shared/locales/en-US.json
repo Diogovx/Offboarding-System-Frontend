@@ -1,0 +1,29 @@
+{
+  "login": {
+    "title": "Access your account",
+    "subtitle": "Cladtek Offboarding Platform",
+    "username_label": "USERNAME",
+    "username_placeholder": "Ex: firstname.lastname",
+    "password_label": "PASSWORD",
+    "forgot_password": "Forgot password?",
+    "btn_enter": "Login to platform",
+    "support": "TECHNICAL SUPPORT"
+  },
+  "navbar": {
+    "offboarding": "Offboarding",
+    "hello": "Hello,",
+    "logout": "Logout"
+  },
+  "offboarding": {
+    "title": "Offboarding",
+    "search_label": "Search for an employee",
+    "btn_search": "Search",
+    "user_name": "Name:",
+    "user_id": "ID:",
+    "user_dept": "Department:",
+    "user_status": "Status:",
+    "user_email": "Email:",
+    "btn_offboard": "Offboarding",
+    "systems_identified": "IDENTIFIED SYSTEMS"
+  }
+}
