@@ -47,7 +47,8 @@
               <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 ml-1">{{ $t('login.username_label') }}</label>
               <input v-model="username" type="text" required 
                      class="block w-full rounded-xl border-2 border-gray-100 bg-gray-50/50 px-4 py-2.5 text-gray-900 focus:outline-none focus:border-cladtek focus:bg-white transition-all" 
-                     :placeholder="$t('login.username_placeholder')"/>
+                     :placeholder="$t('login.username_placeholder')"
+                     />
             </div>
 
             <div>
@@ -55,8 +56,10 @@
               <div class="relative">
                 <input v-model="password" :type="showPassword ? 'text' : 'password'" required 
                        class="block w-full rounded-xl border-2 border-gray-100 bg-gray-50/50 px-4 py-2.5 text-gray-900 focus:outline-none focus:border-cladtek focus:bg-white transition-all" 
-                       placeholder="••••••••"/>
-                <button type="button" @click="showPassword = !showPassword" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-cladtek transition-colors cursor-pointer">
+                       placeholder="••••••••"
+                       />
+                <button type="button" @click="showPassword = !showPassword" class="absolute top-1/2 -translate-y-1/2 text-gray-400 hover:text-cladtek transition-colors cursor-pointer"
+            :class="currentLocale === 'ar' ? 'left-3' : 'right-3'">
                   <svg v-if="!showPassword" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2"/></svg>
                   <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88L4.22 4.22m13.9 13.9L12.46 12.46M21.543 12A9.97 9.97 0 0012 5c-.783 0-1.537.09-2.265.259M21 21l-6.75-6.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
