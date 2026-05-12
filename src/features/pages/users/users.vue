@@ -396,7 +396,6 @@ const isFormValid = computed(() => {
   return true;
 });
 
-// Ações
 const openModal = (type, user = null) => {
   feedback.value = "";
   formError.value = "";
