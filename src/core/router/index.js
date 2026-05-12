@@ -7,11 +7,20 @@ import Audit from '@/features/pages/audit/audit.vue'
 import User from '@/features/pages/users/users.vue' 
 
 const routes = [
-  { path: '/', name: 'login', component: Login },
+
+  { path: '/', name: 'home', redirect: '/login' },
+  { path: '/login', name: 'login', component: Login },
   { path: '/onboarding', name: 'onboarding', component: Onboarding },
   { path: '/offboarding', name: 'offboarding', component: Offboarding },
-  { path: '/audit', name: 'audit', component: Audit },
+  { path: '/logs', name: 'logs', component: Audit },
   { path: '/users', name: 'users', component: User },
+
+  // catch-all route to handle undefined paths
+   { 
+    path: '/:pathMatch(.*)*', 
+    redirect: '/login' 
+  }
+
 ]
 
 const router = createRouter({
