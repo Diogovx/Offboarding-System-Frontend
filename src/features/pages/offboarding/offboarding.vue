@@ -263,6 +263,48 @@ const confirmOffboarding = async () => {
       showConfirmModal.value = false;
       actionMessage.value = `Sucesso! Sistemas afetados: ${response.data.details.join(", ")}.`;
       actionClass.value = "bg-green-50 border-green-500 text-green-700";
+      
+      if (response.data.terms && response.data.terms.length > 0) {
+        response.data.terms.forEach(term => {
+          try {
+            const b64Data = term.content_base64;
+            const contentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+            
+            const byteCharacters = atob(b64Data);
+            const byteArrays = [];
+            
+            const sliceSize = 512;
+            for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+              const slice = byteCharacters.slice(offset, offset + sliceSize);
+              
+              const byteNumbers = new Array(slice.length);
+              for (let i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+              }
+              
+              const byteArray = new Uint8Array(byteNumbers);
+              byteArrays.push(byteArray);
+            }
+            
+            const blob = new Blob(byteArrays, { type: contentType });
+            
+            const blobUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = term.filename;
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
+            
+          } catch (err) {
+            console.error(`Erro ao decodificar o Base64 do arquivo ${term.filename}:`, err);
+          }
+        });
+      }
+
       foundUser.value = null;
       lastOffboarding.value = null;
     }
